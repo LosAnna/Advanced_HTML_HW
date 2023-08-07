@@ -1,0 +1,424 @@
+@import "_vars.scss";
+@import "_mixin.scss";
+@import "_visual.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+ .header__menu {
+    background: $color_black;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    @include flex-center-between;
+}
+ 
+.logo {
+    gap: 40px;
+    @include flex-center;
+}
+ 
+ .search:hover path,
+ .burger:hover path,
+ .user:hover path,
+ .shop__cart:hover path {
+    fill: $color_pink;
+    transition: $transition;
+}
+ 
+.navigation {
+    gap: 33px;
+    @include flex-center;
+}
+
+.header {
+    background: #f1e4e6;
+    position: relative;
+    @include flex-center-between;
+}
+
+.title {
+    color: $color_pink;
+    font-size: 24px;
+    padding: 60px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.shopping__cart {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    padding-bottom: 128px;
+ }
+ 
+ .add__product {
+    display: flex;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    margin-bottom: 40px;
+    &__head {
+       display: flex;
+       justify-content: space-between;
+       position: relative;
+    }
+    &__image {
+       width: 262px;
+    }
+    &__info {
+       width: 390px;
+       padding: 31px 22px 22px;
+       box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+    }
+    &__name {
+       margin-bottom: 36px;
+       color: $color_black;
+       font-size: 24px;
+       font-style: normal;
+       font-weight: $font-400;
+       line-height: normal;
+    }
+    &__price,
+    &__color,
+    &__size,
+    &__quantity {
+       font-size: 22px;
+       font-style: normal;
+       font-weight: $font-400;
+       line-height: normal;
+       color: #575757;
+    }
+    &__cost {
+       color: $color_pink;
+    }
+    &__input {
+       width: 44px;
+       color: #656565;
+       font-size: 18px;
+       font-weight: $font-400;
+       line-height: normal;
+       text-align: center;
+       padding-top: 6px;
+       border: 1px solid #eaeaea;
+       outline: none;
+       &::-webkit-outer-spin-button,
+       &::-webkit-inner-spin-button {
+          display: none;
+       }
+    }
+    &__input__quantity {
+       display: flex;
+       align-items: center;
+       gap: 24px;
+    }
+    &__close {
+       position: absolute;
+       right: 0;
+       &:hover path {
+          fill: $color_pink;
+          transition: $transition;
+       }
+    }
+    &__button {
+       padding-top: 32px;
+       display: flex;
+       justify-content: space-between;
+       &__style {
+          padding: 17px 41px;
+          background: none;
+          border: 1px solid #a4a4a4;
+          color: $textColor;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: $font-300;
+          line-height: normal;
+          transition: $transition;
+          &:hover {
+             background-color: $color_pink;
+             color: $textColorHover;
+          }
+       }
+    }
+ }
+ 
+ .adress {
+    margin-top: 13px;
+    width: 360px;
+    margin-bottom: 57px;
+    
+    &__shipping {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+     }
+    &__head {
+       color: $color_black;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: $font-300;
+       line-height: normal;
+    }
+
+    &__сity {
+        color: #b1b1b1;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: $font-300;
+        line-height: normal;
+        border: 1px solid #a4a4a4;
+        padding-left: 17px;
+        height: 45px;
+        &::-webkit-input-placeholder {
+           color: #b1b1b1;
+        }
+    }
+    &__state,
+    &__postcode {
+       height: 45px;
+       outline: none;
+       color: $color_black;
+       font-size: 13px;
+       font-style: normal;
+       font-weight: $font-300;
+       line-height: normal;
+       border: 1px solid #a4a4a4;
+       padding-left: 17px;
+       &::-webkit-input-placeholder {
+          color: #4a4a4a;
+       }
+    }
+    &__сity {
+       color: #b1b1b1;
+       &::-webkit-input-placeholder {
+          color: #b1b1b1;
+       }
+    }
+    &__get__quote {
+       padding: 11px 15px;
+       width: fit-content;
+       background: none;
+       font-size: 11px;
+       font-style: normal;
+       font-weight: $font-300;
+       line-height: normal;
+       border: 1px solid #a4a4a4;
+       color: #a4a4a4;
+       &:hover {
+          background-color: $color_pink;
+          color: $textColorHover;
+       }
+    }
+ }
+ 
+ .total {
+    background-color: #f5f3f3;
+    padding: 40px 34px;
+    text-align: center;
+    justify-content: center;
+    &__summ {
+       text-align: right;
+       display: flex;
+       flex-direction: column;
+       gap: 12px;
+    }
+    &__sub {
+       color: #4a4a4a;
+       font-size: 11px;
+       font-style: normal;
+       font-weight: $font-400;
+       line-height: normal;
+    }
+    &__sub__summ {
+       margin-left: 20px;
+       font-weight: $font-400;
+    }
+    &__grand {
+       color: $color_black;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: $font-300;
+       line-height: normal;
+    }
+    &__grand__summ {
+       color: $color_pink;
+       margin-left: 30px;
+       font-style: normal;
+       font-weight: $font-700;
+       line-height: normal;
+    }
+    &__line {
+       width: 275px;
+       margin-top: 21px;
+       margin-bottom: 17px;
+       margin-left: auto;
+       margin-right: auto;
+       border: 1px solid #e2e2e2;
+       text-align: center;
+    }
+    &__checkout {
+       padding: 17px 43px;
+       background-color: $color_pink;
+       border: none;
+       color: $textColorHover;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: $font-300;
+       line-height: normal;
+       &:hover {
+          background-color: $textColorHover;
+          color: $textColor;
+       }
+    }
+ }
+
+.subscribe {
+    position: relative;
+    padding-top: 97px;
+    padding-bottom: 126px;
+    @include flex-center-between;
+}
+ 
+.subscribe {
+    background-image: url(../img/img__subscribe.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+ 
+.background__filter {
+    background: rgba(244, 244, 244, 0.7);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: 1;
+} 
+ 
+.review {
+    width: 360px;
+    text-align: center;
+    z-index: 2;
+}
+ 
+.review__text {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.regisration__form {
+    z-index: 2;
+}
+ 
+.italic {
+    font-style: italic;
+}
+ 
+.registr__title {
+    font-style: normal;
+    font-weight: $font-700;
+    font-size: 24px;
+    line-height: 167.2%;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.registr__text {
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 18px;
+    line-height: 167.2%;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.input__email {
+    margin-top: 32px;
+    @include flex-center;
+}
+ 
+.email {
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    height: 49px;
+    width: 256px;
+    background: #e1e1e1;
+    border: none;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: $color_black;
+    padding-left: 22px;
+    opacity: 0.67;
+    outline: none;
+}
+ 
+.button__subscribe {
+    border: none;
+    width: 100px;
+    height: 49px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    background: $color_pink;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color_white;
+    transition: $transition;
+    @include flex-center;
+}
+ 
+.button__subscribe:hover {
+    background: $color_white;
+    color: $color_pink;
+    transition: $transition;
+}
+ 
+.copyright {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $color_black;
+    @include flex-center-between;
+}
+ 
+.copy {
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color_white;
+}
+ 
+.media__icon {
+    display: flex;
+    gap: 8px;
+}
+ 
+.img__svg:hover .fon__svg {
+    fill: $color_pink;
+    transition: $transition;
+}
+ 
+.img__svg:hover path {
+    fill: $color_white;
+    transition: $transition;
+}
