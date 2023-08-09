@@ -1,0 +1,310 @@
+@import "_vars.scss";
+@import "_mixin.scss";
+@import "_visual.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+ .header__menu {
+    background: $color_black;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    @include flex-center-between;
+}
+ 
+.logo {
+    gap: 40px;
+    @include flex-center;
+}
+ 
+ .search:hover path,
+ .burger:hover path,
+ .user:hover path,
+ .shop__cart:hover path {
+    fill: $color_pink;
+    transition: $transition;
+}
+ 
+.navigation {
+    gap: 33px;
+    @include flex-center;
+}
+
+.header {
+    background: #f1e4e6;
+    position: relative;
+    @include flex-center-between;
+}
+
+.title {
+    color: $color_pink;
+    font-size: 24px;
+    padding: 60px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__name {
+       font-size: 16px;
+       color: $color_black;
+       font-weight: $font-300;
+       line-height: normal;
+       font-style: normal;
+    }
+    &__radio {
+       margin-top: 12px;
+       margin-bottom: 12px;
+       display: flex;
+       gap: 10px;
+       &__indent {
+          margin-right: 10px;
+          font-size: 11px;
+          font-weight: $font-300;
+       }
+       &__size {
+          width: 17px;
+          height: 17px;
+       }
+    }
+    &__input {
+       width: 360px;
+       height: 45px;
+       box-sizing: border-box;
+       outline: none;
+       border: 1px solid #a4a4a4;
+       padding-left: 17px;
+       &::-webkit-input-placeholder {
+          color: #b1b1b1;
+       }
+    }
+    &__details {
+       font-size: 16px;
+       font-weight: $font-300;
+       color: $color_black;
+    }
+    &__text {
+       font-size: 13px;
+       font-weight: $font-300;
+       color: #b1b1b1;
+       font-style: normal;
+       line-height: normal;
+       margin-bottom: 19px;
+    }
+    &__button {
+       width: fit-content;
+       padding: 17px 29px;
+       display: flex;
+       gap: 20px;
+       align-items: center;
+       color: $textColorHover;
+       background: $color_pink;
+       outline: none;
+       border: none;
+       &-name {
+          font-size: 14px;
+          font-weight: $font-400;
+       }
+       &:hover {
+          color: $color_pink;
+          background: $textColorHover;
+          box-shadow: 0px 0px 2px $color_pink;
+          transition: $transition;
+       }
+       &:hover path {
+          fill: $color_pink;
+          transition: $transition;
+       }
+    }
+ }
+ 
+ .reg__form {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    gap: 128px;
+    &__info {
+       display: flex;
+       flex-direction: column;
+       gap: 22px;
+    }
+    &__ul {
+       list-style-image: url(../img/Vector.svg);
+       text-indent: 24px;
+       padding-left: 23px;
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+    }
+    &__li {
+       font-size: 24px;
+       font-weight: $font-300;
+       color: $textColor;
+    }
+    &__head {
+       font-size: 24px;
+       font-weight: $font-300;
+       color: $textColor;
+       font-style: normal;
+       line-height: normal;   
+    }
+    &__text {
+       font-size: 24px;
+       font-weight: $font-300;
+       color: $textColor;
+    }
+ }
+
+.subscribe {
+    position: relative;
+    padding-top: 97px;
+    padding-bottom: 126px;
+    @include flex-center-between;
+}
+ 
+.subscribe {
+    background-image: url(../img/img__subscribe.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+ 
+.background__filter {
+    background: rgba(244, 244, 244, 0.7);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: 1;
+} 
+ 
+.review {
+    width: 360px;
+    text-align: center;
+    z-index: 2;
+}
+ 
+.review__text {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.regisration__form {
+    z-index: 2;
+}
+ 
+.italic {
+    font-style: italic;
+}
+ 
+.registr__title {
+    font-style: normal;
+    font-weight: $font-700;
+    font-size: 24px;
+    line-height: 167.2%;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.registr__text {
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 18px;
+    line-height: 167.2%;
+    text-align: center;
+    color: $color_black;
+}
+ 
+.input__email {
+    margin-top: 32px;
+    @include flex-center;
+}
+ 
+.email {
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    height: 49px;
+    width: 256px;
+    background: #e1e1e1;
+    border: none;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: $color_black;
+    padding-left: 22px;
+    opacity: 0.67;
+    outline: none;
+}
+ 
+.button__subscribe {
+    border: none;
+    width: 100px;
+    height: 49px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    background: $color_pink;
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color_white;
+    transition: $transition;
+    @include flex-center;
+}
+ 
+.button__subscribe:hover {
+    background: $color_white;
+    color: $color_pink;
+    transition: $transition;
+}
+ 
+.copyright {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $color_black;
+    @include flex-center-between;
+}
+ 
+.copy {
+    font-style: normal;
+    font-weight: $font-400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color_white;
+}
+ 
+.media__icon {
+    display: flex;
+    gap: 8px;
+}
+ 
+.img__svg:hover .fon__svg {
+    fill: $color_pink;
+    transition: $transition;
+}
+ 
+.img__svg:hover path {
+    fill: $color_white;
+    transition: $transition;
+}
