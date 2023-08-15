@@ -114,7 +114,7 @@
        background: $color_pink;
        outline: none;
        border: none;
-       &-name {
+       &__name {
           font-size: 14px;
           font-weight: $font-400;
        }
@@ -308,3 +308,5 @@
     fill: $color_white;
     transition: $transition;
 }
+
+@import "_media.scss";

@@ -1,0 +1,115 @@
+@media (max-width: 1140px) {
+    // .header__title {
+    //    gap: 40px;
+    // }   
+    
+    // .title__image {
+    //     margin-left: -150px;
+    //     width: 600px;
+    // }    
+    
+    // .top__item {
+    //     display: grid;
+    //     grid-template-columns: repeat(3, mminmax(232px, 360px));
+    //     gap: 20px;
+    // }
+    .products{
+    grid-template-columns: repeat(2, 360px);
+    gap: 16px;
+    }
+    .wrap__block {
+        padding: 65px 235px;
+    }
+
+    .products__view {
+        display: none;
+    }
+    
+    .shopping__cart__info {
+        margin-top: 119px;
+        float: inline-end;
+    }
+
+    .advantages {
+        grid-template-columns: repeat(1, 360px);
+        gap: 48px;
+        padding-top: 48px;
+        padding-bottom: 64px;       
+    } 
+}   
+ 
+ 
+ @media (max-width: 767px) {
+    .center {
+       padding-left: calc(50% - (768px - 16px) / 2);
+       padding-right: calc(50% - (768px - 16px) / 2);
+    }
+
+    // .header__title {
+    //     justify-content: space-between;
+    //     gap: 40px;  
+    // }
+    // .title__image {
+    //       margin-left: -30px;
+    //       width: 385px;
+    // }
+    // .header__text {
+    //       font-size: 44px;
+    // }
+    // .second__line {
+    //       font-size: 24px;
+    // }
+    
+    // .top__item {
+    //    margin-top: 20px;
+    //    margin-bottom: 155px;
+    // }
+
+    .products{
+        grid-template-columns: repeat(1, 358px);
+        padding-top: 64px;
+        padding-bottom: 64px;    
+        justify-content: center;
+    }
+    .wrap__block {
+          padding: 65px 106px;
+    }
+    
+    .shopping__cart{
+       flex-direction: column;
+       gap: 64px;
+       &__info {
+          @include flex-center-between;
+       }
+    }
+    .add__product{
+       &__button {
+          @include flex-center;
+          gap: 48px;
+       }
+    }
+ 
+    .reg__form {
+        gap: 22px;
+    }
+ 
+    .subtitle__text {
+        margin-bottom: 73px;
+    }
+    
+    .advantages {
+       padding-top: 48px;
+       padding-bottom: 64px;
+       flex-direction: column;
+    }
+    .value {
+        gap: 48px;
+    }
+
+    .subscribe {
+       flex-direction: column;
+       gap: 48px;
+       padding-top: 53px;
+       padding-bottom: 146px;
+    }
+}
