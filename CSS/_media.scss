@@ -1,18 +1,4 @@
 @media (max-width: 1140px) {
-    // .header__title {
-    //    gap: 40px;
-    // }   
-    
-    // .title__image {
-    //     margin-left: -150px;
-    //     width: 600px;
-    // }    
-    
-    // .top__item {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, mminmax(232px, 360px));
-    //     gap: 20px;
-    // }
     .products{
     grid-template-columns: repeat(2, 360px);
     gap: 16px;
@@ -44,27 +30,6 @@
        padding-left: calc(50% - (768px - 16px) / 2);
        padding-right: calc(50% - (768px - 16px) / 2);
     }
-
-    // .header__title {
-    //     justify-content: space-between;
-    //     gap: 40px;  
-    // }
-    // .title__image {
-    //       margin-left: -30px;
-    //       width: 385px;
-    // }
-    // .header__text {
-    //       font-size: 44px;
-    // }
-    // .second__line {
-    //       font-size: 24px;
-    // }
-    
-    // .top__item {
-    //    margin-top: 20px;
-    //    margin-bottom: 155px;
-    // }
-
     .products{
         grid-template-columns: repeat(1, 358px);
         padding-top: 64px;
@@ -111,5 +76,269 @@
        gap: 48px;
        padding-top: 53px;
        padding-bottom: 146px;
+    }
+}
+
+@media (max-width: 425px) {
+    .center {
+       padding-left: calc(50% - (425px - 16px) / 2);
+       padding-right: calc(50% - (425px - 16px) / 2);
+    }
+    .user {
+          display: none;
+    }
+    .shop__cart {
+          display: none;
+    }
+    .navigation {
+          gap: 0px;
+    }
+    
+    .header__title {
+        justify-content: center;
+        padding-top: 148px;
+        padding-bottom: 148px;
+    }
+    .title__image {
+        display: none;
+    }
+    .header__text {
+          font-size: 38px;
+    }
+    .second__line {
+          font-size: 20px;
+    }
+    .header {
+       padding-top: 60px;
+       padding-bottom: 60px;
+       flex-direction: column;
+       gap: 32px;
+    }
+    .filter__sort {
+       justify-content: center;
+    }
+    .filter {
+       &__heading {
+          display: none;
+       }
+       &__summary {
+          padding-left: 0px;
+       }
+    }
+    .sort {
+       margin-left: -288px;
+       &__heading {
+          font-size: 12px;
+       }
+    }
+    .shopping__cart {
+       padding-top: 39px;
+       padding-bottom: 96px;
+       &__info {
+          gap: 48px;
+       }
+    }
+    .add__product{
+       height: 188px;
+       margin-bottom: 32px;
+       &__image {
+          width: 143px;
+       }
+       &__name {
+          font-size: 16px;
+          margin-bottom: 25px;
+       }
+       &__price,
+       &__color,
+       &__size,
+       &__quantity {
+          font-size: 14px;
+       }
+       &__input {
+          width: 24px;
+          font-size: 10px;
+          padding-top: 2px;
+       }
+       &__info {
+          padding: 13px 17px 17px;
+          gap: 4px;
+       }
+       &__input__quantity {
+          gap: 15px;
+       }
+       &__button {
+          padding-top: 0px;
+          @include flex-center;
+          gap: 9px;
+          &__style {
+             padding: 9px 18px;
+             font-size: 12px;
+          }
+       }
+    }
+    .adress {
+       width: 100%;
+    }
+    .total {
+       padding: 40px 14px;
+       width: 100%;
+    }
+    .left__arrow, 
+    .right__arrow {
+        top: 288px;
+    }
+    .slide__img {
+        margin: 85px 0;
+        width: 100%;
+    }
+    
+    .wrap__block {
+        position: relative;
+        top: 0;
+        padding: 65px 24px;
+    }
+    .line2 {
+        margin: 0px 100px;
+        margin-top: 32px;
+        margin-bottom: 49px;
+    }
+    .product__menu {
+        font-size: 10px;
+        gap: 25px;
+    }
+    
+    .top__catalog{
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+    .top__item {
+        justify-content: center;
+        grid-template-columns: repeat(1, minmax(232px, 360px));
+        gap: 32px;
+    }
+    .item__big {
+        height: 111px;
+        grid-column: span 1;
+    }
+    .catalog__img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .advantages {
+        padding-top: 48px;
+        padding-bottom: 64px;
+        gap: 48px;   
+    }
+    .subscribe {
+        padding-top: 64px;
+        padding-bottom: 110px;
+    }
+    .review__text {
+        font-size: 18px;
+    }
+    .email {
+        width: 220px;
+    }
+    
+    .copyright {
+       padding-top: 43px;
+       padding-bottom: 9px;
+       flex-direction: column-reverse;
+       gap: 40px;
+    }
+ 
+    .reg__form{
+       padding-top: 40px;
+       flex-direction: column;
+       gap: 40px;
+       &__head {
+          font-size: 16px;
+       }
+       &__text {
+          font-size: 16px;
+          font-weight: $font-300;
+          color: $textColor;
+       }
+       &__li {
+          font-size: 16px;
+       }
+    }
+ 
+    .form {
+        &__input {
+           width: 100%;
+        }
+     }
+  }
+ 
+ @media (max-width: 375px) {
+    .center {
+        padding-left: calc(50% - (375px - 16px) / 2);
+        padding-right: calc(50% - (375px - 16px) / 2);
+    }
+    .filter {
+        width: 343px;
+    }
+    .wrap__block {
+        padding: 65px 10px;
+    }
+    
+    .add__product {
+       &__button {
+          &__style {
+             font-size: 10px;
+          }
+       }
+    }
+ }
+ 
+ @media (max-width: 320px) {
+    .center {
+       padding-left: calc(50% - (320px - 8px) / 2);
+       padding-right: calc(50% - (320px - 8px) / 2);
+    }
+    .filter {
+       width: 288px;
+    }
+    .advantages {
+        .value {
+          width: 288px;
+       }
+    }
+    .subscribe {
+        .review {
+          width: 288px;
+          text-align: center;
+          z-index: 2;
+       }
+       .email {
+          width: 188px;
+       }
+    }
+    .product__info {
+       .wrap-blok {
+          padding: 65px 7px;
+       }
+    }
+    .shopping__cart {
+        height: 188px;
+        margin-bottom: 32px;
+    }
+    .add__product {
+        &__image {
+        width: 123px;
+        }
+        &__info {
+          padding: 13px 10px 10px;
+       }
+        &__button {
+          padding-top: 0px;
+          @include flex-center;
+          gap: 9px;
+          &__style {
+             font-size: 10px;
+          }
+       }
     }
 }
